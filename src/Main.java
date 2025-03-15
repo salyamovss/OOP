@@ -1,15 +1,20 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Student student1;
+        student1 = new Student
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+                ("Айжан", 17, 500);
+        Student student2 = new Student("Бакыт", 15, 300);
+        Student student3 = new Student("Эржан", 18, 700);
+
+        ArrayList<Student> students = new ArrayList<>();
+        students.add(student1);
+        students.add(student2);
+        students.add(student3);
+
+        Course course = new Course("Java", "Асель", students);
+        course.displayCourseInfo();
     }
 }
